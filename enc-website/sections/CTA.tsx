@@ -22,7 +22,7 @@ export default function CTA() {
           ref={ref}
           initial={{ opacity: 0, scale: 0.96 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
           className="relative rounded-3xl overflow-hidden"
         >
           {/* Gradient background */}
@@ -76,7 +76,7 @@ export default function CTA() {
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ delay: 0.2, duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
               className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 leading-tight"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >

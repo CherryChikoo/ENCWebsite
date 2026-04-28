@@ -63,7 +63,7 @@ export default function About() {
             ref={ref}
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
             className="text-center mb-16"
           >
             <span className="section-label mb-5 inline-flex">
@@ -94,7 +94,7 @@ export default function About() {
                   transition={{
                     delay: i * 0.14,
                     duration: 0.7,
-                    ease: [0.22, 1, 0.36, 1],
+                    ease: [0.22, 1, 0.36, 1] as const,
                   }}
                   className="group relative glass-card rounded-2xl p-7 hover:border-purple-500/25 transition-all duration-300"
                   whileHover={{ y: -4 }}

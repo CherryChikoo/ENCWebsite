@@ -65,7 +65,7 @@ export default function BenefitsCTA() {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
               className="relative"
             >
               <div className="glass-card glow-border rounded-2xl p-8 purple-glow relative overflow-hidden">
@@ -103,7 +103,7 @@ export default function BenefitsCTA() {
                           initial={{ width: 0 }}
                           whileInView={{ width: `${m.pct}%` }}
                           viewport={{ once: true }}
-                          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+                          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] as const, delay: 0.3 }}
                           className="h-full bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full"
                         />
                       </div>
@@ -137,7 +137,7 @@ export default function BenefitsCTA() {
               ref={ref}
               initial={{ opacity: 0, x: 40 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
             >
               <span className="section-label mb-5 inline-flex">
                 The Full Benefits of ENC

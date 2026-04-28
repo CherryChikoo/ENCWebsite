@@ -46,7 +46,7 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
@@ -184,7 +184,7 @@ export default function Hero() {
       <motion.div
         initial={{ opacity: 0, y: 60, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        transition={{ delay: 0.8, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ delay: 0.8, duration: 0.9, ease: [0.22, 1, 0.36, 1] as const }}
         className="relative z-10 mt-16 w-full max-w-5xl mx-auto"
       >
         <div className="glass-card glow-border rounded-2xl overflow-hidden purple-glow">
